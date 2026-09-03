@@ -1,1 +1,18 @@
-document.addEventListener('click',e=>{const c=e.target.closest('.card[data-title]');if(c){const m=document.querySelector('.modal');m.querySelector('img').src=c.dataset.img;m.querySelector('h2').textContent=c.dataset.title;m.querySelector('.desc').textContent=c.dataset.desc;m.querySelector('.detail').textContent=c.dataset.detail||'';m.classList.add('open');document.body.style.overflow='hidden'}if(e.target.matches('.close,.modal')){document.querySelector('.modal')?.classList.remove('open');document.body.style.overflow=''}});document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelector('.modal')?.classList.remove('open');document.body.style.overflow=''}})
+
+document.addEventListener('click',(e)=>{
+  const card=e.target.closest('.product');
+  if(card){
+    const modal=document.querySelector('.modal');
+    modal.querySelector('.modal-image').src=card.dataset.image;
+    modal.querySelector('.modal-title').textContent=card.dataset.title;
+    modal.querySelector('.modal-desc').textContent=card.dataset.desc;
+    modal.querySelector('.modal-material').textContent=card.dataset.material||'';
+    modal.classList.add('open');document.body.style.overflow='hidden';
+  }
+  if(e.target.matches('.close')||e.target.classList.contains('modal')){
+    document.querySelector('.modal')?.classList.remove('open');document.body.style.overflow='';
+  }
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){document.querySelector('.modal')?.classList.remove('open');document.body.style.overflow='';}
+});
