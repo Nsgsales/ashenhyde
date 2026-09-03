@@ -15,8 +15,8 @@ html{scroll-behavior:smooth}
 body{
   margin:0;color:var(--cream);font-family:Georgia,"Times New Roman",serif;
   background:
-    radial-gradient(circle at 50% -10%,rgba(96,49,22,.34),transparent 36%),
-    linear-gradient(180deg,#090706,#100b08 50%,#080706);
+    linear-gradient(rgba(12,8,6,.42),rgba(8,6,5,.56)),
+    url("assets/leather-bg.jpg") center top / 900px 600px repeat;
   min-height:100vh;
 }
 a{color:inherit;text-decoration:none}
@@ -25,21 +25,22 @@ img{display:block;max-width:100%}
 
 /* NAV */
 .topbar{
-  position:sticky;top:0;z-index:50;background:rgba(8,7,6,.95);
-  border-bottom:1px solid var(--line);backdrop-filter:blur(12px)
+  position:absolute;top:0;left:0;right:0;z-index:50;
+  background:transparent;border-bottom:0;backdrop-filter:none
 }
-.nav{height:66px;display:flex;align-items:center;justify-content:space-between}
-.brand-mini{font-size:19px;letter-spacing:.23em;color:var(--gold2);font-weight:bold}
-.nav-right{display:flex;align-items:center;gap:28px}
+.nav{height:72px;display:flex;align-items:center;justify-content:flex-end}
+.brand-mini{display:none}
+.nav-right{display:flex;align-items:center;gap:30px}
 .navlink,.dropbtn{
-  background:none;border:0;color:var(--cream);font:inherit;cursor:pointer;
-  text-transform:uppercase;letter-spacing:.12em;font-size:12px;padding:23px 0
+  background:none;border:0;color:var(--gold2);font:inherit;cursor:pointer;
+  text-transform:uppercase;letter-spacing:.14em;font-size:12px;padding:24px 0;
+  text-shadow:0 1px 12px rgba(0,0,0,.5)
 }
-.navlink:hover,.dropbtn:hover{color:var(--gold2)}
+.navlink:hover,.dropbtn:hover{color:#e7c58b}
 .dropdown{position:relative}
 .dropdown-menu{
-  position:absolute;right:0;top:57px;min-width:240px;background:#100b08;
-  border:1px solid var(--line);box-shadow:0 20px 55px rgba(0,0,0,.55);
+  position:absolute;right:0;top:58px;min-width:240px;background:#1a100b;
+  border:1px solid rgba(179,122,54,.48);box-shadow:0 20px 55px rgba(0,0,0,.55);
   opacity:0;visibility:hidden;transform:translateY(-8px);transition:.18s ease
 }
 .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{
@@ -47,14 +48,14 @@ img{display:block;max-width:100%}
 }
 .dropdown-menu a{
   display:block;padding:16px 18px;border-bottom:1px solid rgba(179,122,54,.15);
-  font-size:13px;text-transform:uppercase;letter-spacing:.1em
+  font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold2)
 }
-.dropdown-menu a:hover{background:#1d120c;color:var(--gold2)}
+.dropdown-menu a:hover{background:#24160e;color:#f0cf95}
 
 /* HERO */
 .hero{
   min-height:76vh;display:flex;align-items:center;justify-content:center;
-  padding:64px 20px 52px;text-align:center
+  padding:92px 20px 52px;text-align:center
 }
 .hero-inner{width:min(1020px,100%)}
 .hero-logo{width:min(960px,98%);margin:0 auto;filter:drop-shadow(0 24px 48px rgba(0,0,0,.5))}
@@ -68,7 +69,7 @@ img{display:block;max-width:100%}
 
 /* SECTIONS */
 .section{padding:76px 0}
-.section.alt{background:rgba(0,0,0,.15);border-top:1px solid rgba(179,122,54,.12);border-bottom:1px solid rgba(179,122,54,.12)}
+.section.alt{background:rgba(5,3,2,.34);border-top:1px solid rgba(179,122,54,.12);border-bottom:1px solid rgba(179,122,54,.12)}
 .section-head{text-align:center;margin-bottom:38px}
 .eyebrow{color:var(--gold2);font-size:11px;letter-spacing:.35em;text-transform:uppercase}
 h1,h2,h3{font-weight:600}
@@ -94,7 +95,7 @@ h1,h2,h3{font-weight:600}
 /* COLLECTIONS */
 .collections{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .collection-card{
-  border:1px solid var(--line);background:linear-gradient(180deg,#140d09,#0d0907);
+  border:1px solid var(--line);background:linear-gradient(180deg,rgba(20,13,9,.92),rgba(13,9,7,.94));
   overflow:hidden;transition:.2s ease
 }
 .collection-card:hover{transform:translateY(-5px);border-color:rgba(211,169,103,.72)}
@@ -113,7 +114,7 @@ h1,h2,h3{font-weight:600}
 /* PRODUCTS */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:50px 0 82px}
 .product{
-  cursor:pointer;background:var(--panel);border:1px solid var(--line);overflow:hidden;transition:.2s ease
+  cursor:pointer;background:rgba(18,12,9,.93);border:1px solid var(--line);overflow:hidden;transition:.2s ease
 }
 .product:hover{transform:translateY(-4px);border-color:rgba(211,169,103,.72)}
 .product img{width:100%;height:330px;object-fit:cover}
