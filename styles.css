@@ -210,3 +210,57 @@ footer{border-top:1px solid var(--line);padding:34px 0 42px;text-align:center;co
 #about{
   padding-top:68px;
 }
+
+/* Five collection cards on larger screens */
+@media(min-width:1201px){
+  .collections{grid-template-columns:repeat(5,1fr);gap:18px}
+  .collection-card img{height:285px}
+  .collection-body{padding:19px}
+  .collection-body h3{font-size:24px}
+  .collection-body p{font-size:14px}
+}
+
+/* Homepage: let the products take over immediately after the logo */
+body.homepage .hero{min-height:auto}
+
+/* v21 homepage hierarchy */
+.hero{
+  min-height:auto;
+  padding:88px 20px 28px;
+}
+#collections{
+  padding-top:18px !important;
+  padding-bottom:74px;
+}
+#collections .collections{
+  margin-top:0;
+}
+@media(min-width:1201px){
+  #collections .collections{
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+  }
+  #collections .collection-card img{
+    height:285px;
+  }
+  #collections .collection-body{
+    padding:19px;
+  }
+  #collections .collection-body h3{
+    font-size:23px;
+  }
+}
+@media(min-width:861px) and (max-width:1200px){
+  #collections .collections{grid-template-columns:repeat(3,1fr)}
+}
+
+
+/* v22 small collections heading */
+.collections-head{
+  margin-bottom:18px;
+  text-align:center;
+}
+.collections-head .eyebrow{
+  font-size:18px;
+  letter-spacing:.18em;
+}
