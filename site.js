@@ -13,7 +13,7 @@ document.addEventListener('click',(e)=>{
     modal.querySelector('.modal-material').textContent=card.dataset.material||'';
 
     if(thumbs){
-      const labels=['Product view','Material detail','Worn view'];
+      const labels=['Worn view','Product view','Material detail'];
       thumbs.innerHTML='';
       gallery.forEach((src,i)=>{
         const b=document.createElement('button');
