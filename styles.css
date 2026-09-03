@@ -183,3 +183,30 @@ footer{border-top:1px solid var(--line);padding:34px 0 42px;text-align:center;co
   border-bottom:0 !important;
   box-shadow:none !important;
 }
+
+
+/* Added for 4 home collection cards including Lulav & Esrog Sets */
+@media(min-width:861px) and (max-width:1200px){
+  .collections{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:1201px){
+  .collections{grid-template-columns:repeat(4,1fr)}
+}
+
+/* Homepage hierarchy: collections first and more prominent */
+#collections{
+  padding-top:42px;
+  padding-bottom:84px;
+}
+#collections .section-head{
+  margin-bottom:30px;
+}
+#collections .section-head h2{
+  font-size:50px;
+}
+#collections .collection-card{
+  box-shadow:0 18px 45px rgba(0,0,0,.24);
+}
+#about{
+  padding-top:68px;
+}
